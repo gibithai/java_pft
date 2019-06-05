@@ -9,14 +9,14 @@ public class GroupCreationTests extends TestBase{
 
     @Test
     public void testGroupCreation() throws Exception {
-        gotoGroupPage();
+        app.gotoGroupPage();
         initGroupCreation("new");
-        fillGroupForm(new GroupData("Test1", "Test2", "Test3"));
-        submitGroupCreation("submit");
-        wd.findElement(By.linkText("home")).click();
-        wd.findElement(By.linkText("Logout")).click();
-        wd.findElement(By.name("user")).clear();
-        wd.findElement(By.name("user")).sendKeys("admin");
+        app.fillGroupForm(new GroupData("Test1", "Test2", "Test3"));
+        app.submitGroupCreation("submit");
+        app.wd.findElement(By.linkText("home")).click();
+        app.wd.findElement(By.linkText("Logout")).click();
+        app.wd.findElement(By.name("user")).clear();
+        app.wd.findElement(By.name("user")).sendKeys("admin");
     }
 
 }
