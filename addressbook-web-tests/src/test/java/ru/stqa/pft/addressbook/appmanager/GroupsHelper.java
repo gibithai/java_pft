@@ -5,13 +5,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbook.model.GroupData;
 
 public class GroupsHelper {
-     public FirefoxDriver wd;
+    private FirefoxDriver wd;
 
     public GroupsHelper(FirefoxDriver wd) {
         this.wd = wd;
     }
 
-    public void submitGroupCreation(String submit) { wd.findElement(By.name(submit)).click(); }
+    public void submitGroupCreation(String submit) {
+        wd.findElement(By.name(submit)).click();
+    }
 
     public void fillGroupForm(GroupData groupData) {
         wd.findElement(By.name("group_name")).click();
@@ -22,7 +24,6 @@ public class GroupsHelper {
         wd.findElement(By.name("group_header")).sendKeys(groupData.getHeader());
         wd.findElement(By.name("group_footer")).clear();
         wd.findElement(By.name("group_footer")).sendKeys(groupData.getFooter());
-
     }
 
     public void deleteSelectedGroups() {
