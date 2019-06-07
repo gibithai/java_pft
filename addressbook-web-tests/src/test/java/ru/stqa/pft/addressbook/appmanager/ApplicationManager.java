@@ -5,8 +5,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class ApplicationManager extends NavigationHelper{
+public class ApplicationManager {
 
+    private final NavigationHelper navigationHelper = new NavigationHelper();
     public FirefoxDriver wd;
 
     private GroupsHelper groupsHelper;
@@ -60,5 +61,9 @@ public class ApplicationManager extends NavigationHelper{
 
     public GroupsHelper getGroupsHelper() {
         return groupsHelper;
+    }
+
+    public NavigationHelper getNavigationHelper() {
+        return navigationHelper;
     }
 }
