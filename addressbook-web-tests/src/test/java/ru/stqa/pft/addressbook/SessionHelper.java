@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbook.appmanager.GroupsHelper;
 
+import static ru.stqa.pft.addressbook.appmanager.GroupsHelper.*;
+
 public class SessionHelper {
     private FirefoxDriver wd;
 
@@ -18,6 +20,6 @@ public class SessionHelper {
         wd.findElement(By.name("pass")).clear();
         wd.findElement(By.name("pass")).sendKeys(password);
         wd.findElement(By.id("LoginForm")).submit();
-        GroupsHelper.submitGroupCreation("user");
+
     }
 }

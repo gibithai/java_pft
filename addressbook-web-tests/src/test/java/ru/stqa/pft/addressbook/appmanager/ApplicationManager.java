@@ -3,6 +3,7 @@ package ru.stqa.pft.addressbook.appmanager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbook.SessionHelper;
+import ru.stqa.pft.addressbook.model.GroupData;
 
 import java.util.concurrent.TimeUnit;
 
@@ -12,6 +13,8 @@ public class ApplicationManager {
     private NavigationHelper navigationHelper;
     private GroupsHelper groupsHelper;
     private SessionHelper SessionHelper;
+    private GroupData GroupData;
+
 
     public void init() {
         wd = new FirefoxDriver();
@@ -47,9 +50,6 @@ public class ApplicationManager {
         }
     }
 
-    public void fillGroupForm() {
-
-    }
 
     public GroupsHelper getGroupsHelper() {
         return groupsHelper;

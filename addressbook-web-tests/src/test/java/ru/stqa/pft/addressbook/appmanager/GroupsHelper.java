@@ -6,6 +6,7 @@ import ru.stqa.pft.addressbook.model.GroupData;
 
 public class GroupsHelper {
      public FirefoxDriver wd;
+    private GroupData groupData;
 
     public GroupsHelper(FirefoxDriver wd) {
         this.wd = wd;
@@ -13,7 +14,8 @@ public class GroupsHelper {
 
     public void submitGroupCreation(String submit) { wd.findElement(By.name(submit)).click(); }
 
-    public void fillGroupForm(GroupData groupData) {
+    public void fillGroupForm(String group) {
+
         wd.findElement(By.name("group_name")).click();
         wd.findElement(By.name("group_name")).clear();
         wd.findElement(By.name("group_name")).sendKeys(groupData.getName());
@@ -32,6 +34,8 @@ public class GroupsHelper {
     public void selectGroup() {
       wd.findElement(By.xpath("(//input[@name='selected[]'])[2]")).click();
     }
+
+
 
     public void returnToGroupPage() {
 
