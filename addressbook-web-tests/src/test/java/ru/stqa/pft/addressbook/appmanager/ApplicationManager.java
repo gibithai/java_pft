@@ -13,7 +13,9 @@ public class ApplicationManager {
     private NavigationHelper navigationHelper;
     private GroupsHelper groupsHelper;
     private SessionHelper SessionHelper;
-    private GroupData GroupData;
+
+    public ApplicationManager() {
+    }
 
 
     public void init() {

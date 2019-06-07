@@ -14,7 +14,7 @@ public class GroupsHelper {
 
     public void submitGroupCreation(String submit) { wd.findElement(By.name(submit)).click(); }
 
-    public void fillGroupForm(String group) {
+    public void fillGroupForm(String GroupData) {
 
         wd.findElement(By.name("group_name")).click();
         wd.findElement(By.name("group_name")).clear();
@@ -44,4 +44,7 @@ public class GroupsHelper {
     public void initGroupCreation(String aNew) {
 
     }
+
+
+
 }
