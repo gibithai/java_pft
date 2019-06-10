@@ -4,11 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbook.model.GroupData;
 
-public class GroupsHelper {
+public class GroupHelper {
     public FirefoxDriver wd;
     private GroupData groupData;
 
-    public GroupsHelper(FirefoxDriver wd) {
+    public GroupHelper(FirefoxDriver wd) {
         this.wd = wd;
     }
 
@@ -40,6 +40,7 @@ public class GroupsHelper {
         wd.findElement(By.xpath("(//input[@name='selected[]'])[2]")).click();
     }
 
+    public void fillGroupForm(String group) {
 
-
+    }
 }
