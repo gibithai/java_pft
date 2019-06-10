@@ -2,7 +2,6 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import ru.stqa.pft.addressbook.SessionHelper;
 import ru.stqa.pft.addressbook.model.GroupData;
 
 import java.util.concurrent.TimeUnit;
@@ -14,6 +13,8 @@ public class ApplicationManager {
     private GroupsHelper groupsHelper;
     private SessionHelper SessionHelper;
 
+
+
     public ApplicationManager() {
     }
 
@@ -21,7 +22,7 @@ public class ApplicationManager {
     public void init() {
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        wd.get("http://localhost/addressbook/group.php");
+        wd.get("http://localhost:8080/addressbook//group.php");
         groupsHelper = new GroupsHelper(wd);
         navigationHelper = new NavigationHelper(wd);
         SessionHelper = new SessionHelper(wd);
@@ -60,4 +61,5 @@ public class ApplicationManager {
     public NavigationHelper getNavigationHelper() {
         return navigationHelper;
     }
+
 }
