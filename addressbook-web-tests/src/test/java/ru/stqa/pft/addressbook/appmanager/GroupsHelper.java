@@ -12,6 +12,8 @@ public class GroupsHelper {
         this.wd = wd;
     }
 
+    public void returnToGroupPage() {{ wd.findElement(By.linkText("group page")).click(); }}
+
     public void submitGroupCreation(String submit) { wd.findElement(By.name(submit)).click(); }
 
     public void fillGroupForm(GroupData groupData) {
@@ -27,6 +29,8 @@ public class GroupsHelper {
 
 
     }
+    public void initGroupCreation () {
+        wd.findElement(By.name("new")).click(); }
 
     public void deleteSelectedGroups() {
         wd.findElement(By.xpath("(//input[@name='delete'])[2]")).click();
@@ -37,18 +41,5 @@ public class GroupsHelper {
     }
 
 
-
-    public void returnToGroupPage() {
-
-    }
-
-    public void initGroupCreation(String aNew) {
-
-    }
-
-
-    public void fillGroupForm(String group) {
-
-    }
 
 }
