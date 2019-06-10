@@ -40,7 +40,16 @@ public class GroupHelper extends HelperBase  {
         click(By.xpath("(//input[@name='selected[]'])[2]"));
     }
 
-    public void fillGroupForm(String group) {
+    public void fillGroupForm(String GroupData) {
+
+    }
+
+    public void initGroupModification() {
+        click (By.name("edit"));
+    }
+
+    public void submitGroupModification() {
+        click(By.name("update"));
 
     }
 }
