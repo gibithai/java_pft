@@ -2,6 +2,8 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import sun.plugin2.util.BrowserType;
+
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
@@ -11,13 +13,11 @@ public class ApplicationManager {
     private GroupHelper groupHelper;
     private SessionHelper SessionHelper;
 
-
-
     public ApplicationManager() {
     }
 
-
     public void init() {
+        
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         wd.get("http://localhost:8080/addressbook//group.php");
